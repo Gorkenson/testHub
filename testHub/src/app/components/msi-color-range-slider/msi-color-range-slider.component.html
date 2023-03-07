@@ -1,0 +1,13 @@
+<div style="margin-top: 20px;">
+  <div style="float:left" [textContent]="'Min:'+minValueAbsolute">Min: 0</div>
+  <div style="float:right;" [textContent]="'Max:'+maxValueAbsolute">Max: 0</div>
+  <div class="goal-text"  [textContent]="'Goal:'+goalValueAbsolute"></div>
+  <!-- <div class="gradient" [style]="gradientStyle"> -->
+  <div class="gradient" [ngStyle]="gradientStyleFunc()">
+    <div>
+      <div class="pointer" [style.left]="pointerValuePercent" [style.background-color]='getColorByValue()'>
+        <div class="pointerText" [textContent]="pointerValueAbsolute"></div>
+      </div>
+    </div>
+  </div>
+</div>
